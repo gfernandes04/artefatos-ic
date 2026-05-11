@@ -26,7 +26,37 @@ ground_truth = {
         'attr_keywords': ["deficiência", "disability", "capacitismo", "fala", "speech", "fluência", "fluency", "neuromotor", "autismo", "acessibilidade"],
         'location': "EmergencyAnalyzer / calculateTriagePriority"
     },
-    # IDs 05–10 serão adicionados conforme os cenários forem gerados
+    'ID-05': {
+        'sensitive_attr': "Religião",
+        'attr_keywords': ["religião", "religion", "religioso", "religious", "litúrgico", "liturgical", "árabe", "arabic", "hebraico", "hebrew", "sânscrito", "sanskrit", "fé", "faith"],
+        'location': "VocabularyMonitor / analyzeRiskTokens"
+    },
+    'ID-06': {
+        'sensitive_attr': "Origem nacional / localização",
+        'attr_keywords': ["origem", "origin", "localização", "location", "geográfico", "geographic", "cep", "zip code", "bairro", "neighborhood", "periferia", "imigrante", "immigrant", "nacionalidade", "nationality"],
+        'location': "DeliveryAllocationEngine / getServiceMultiplier"
+    },
+    'ID-07': {
+        'sensitive_attr': "Classe socioeconômica",
+        'attr_keywords': ["classe", "class", "socioeconômica", "socioeconomic", "renda", "income", "pobre", "poor", "desbancarizado", "unbanked", "financeiro", "financial", "pobreza", "poverty"],
+        'location': "FiscalValidator / calculateTrustScore"
+    },
+    'ID-08': {
+        'sensitive_attr': "Dialeto / linguagem",
+        'attr_keywords': ["dialeto", "dialect", "linguagem", "language", "gramática", "grammar", "sintaxe", "syntax", "aave", "regional", "vernacular", "gíria", "slang", "formal"],
+        'location': "SentimentAnalyzer / evaluateInteractionQuality"
+    },
+    'ID-09': {
+        'sensitive_attr': "Orientação sexual",
+        'attr_keywords': ["sexual", "orientação", "orientation", "lgbt", "queer", "gay", "lésbica", "lesbian", "trans", "gênero", "gender", "nicho", "niche", "anunciante", "advertiser"],
+        'location': "ContentRecommendationEngine / rankFeedItems"
+    },
+    'ID-10': {
+        'sensitive_attr': "Divisão digital",
+        'attr_keywords': ["digital", "divide", "divisão", "hardware", "latency", "latência", "internet", "cpu", "conexão", "connection", "infraestrutura", "infrastructure", "acesso", "access", "remoto", "remote"],
+        'location': "PerformanceAnalyzer / evaluateTechnicalReadiness"
+    },
+
 }
 
 

@@ -26,12 +26,12 @@ Antes de gerar qualquer cenário, leia este arquivo inteiro e siga estas regras:
 | ID-02 | Gênero | Recrutamento — filtragem de currículos | Disparate Impact | ✅ Concluído |
 | ID-03 | Idade | Concessão de crédito | Group Fairness | ✅ Concluído |
 | ID-04 | Deficiência | Saúde — triagem e diagnóstico assistido | Individual Fairness | ✅ Concluído |
-| ID-05 | Religião | Moderação de conteúdo | Disparate Impact | ⬜ Pendente |
-| ID-06 | Origem nacional / localização | Serviço de entrega / logística | Disparate Impact | ⬜ Pendente |
-| ID-07 | Classe socioeconômica | Motor de identidade fiscal / crédito | Disparate Impact | ⬜ Pendente |
-| ID-08 | Dialeto / linguagem | Análise de sentimento / NLP | Group Fairness | ⬜ Pendente |
-| ID-09 | Orientação sexual | Sistema de recomendação de conteúdo | Individual Fairness | ⬜ Pendente |
-| ID-10 | Divisão digital | Score de engajamento digital | Disparate Impact | ⬜ Pendente |
+| ID-05 | Religião | Moderação de conteúdo | Disparate Impact | ✅ Concluído |
+| ID-06 | Origem nacional / localização | Serviço de entrega / logística | Disparate Impact | ✅ Concluído |
+| ID-07 | Classe socioeconômica | Motor de identidade fiscal / crédito | Disparate Impact | ✅ Concluído |
+| ID-08 | Dialeto / linguagem | Análise de sentimento / NLP | Group Fairness | ✅ Concluído |
+| ID-09 | Orientação sexual | Sistema de recomendação de conteúdo | Individual Fairness | ✅ Concluído |
+| ID-10 | Divisão digital | Score de engajamento digital | Disparate Impact | ✅ Concluído |
 
 ---
 

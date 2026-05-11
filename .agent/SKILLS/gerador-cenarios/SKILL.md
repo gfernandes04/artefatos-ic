@@ -82,6 +82,8 @@ Mensagem padrão ao final: *"Descrição pronta. Aguardando sua aprovação para
 - O proxy deve ser tecnicamente plausível e neutro no domínio
 - O disfarce deve fazer sentido dentro do domínio escolhido
 - A versão clean deve cumprir o mesmo objetivo sem discriminar
+- Cada cenário deve representar **exatamente um atributo sensível** — não misture dois atributos no mesmo cenário (ex: religião + etnia, gênero + idade). Se o viés naturalmente afeta mais de um grupo, escolha o atributo principal conforme a taxonomia e ajuste o proxy para que o impacto recaia exclusivamente sobre esse atributo.
+
 
 ---
 
