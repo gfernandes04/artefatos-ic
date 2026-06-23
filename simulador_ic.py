@@ -114,21 +114,46 @@ def get_scenario_filename(code_content):
 
 def run_simulation():
     available = list_available_scenarios()
-    prompts   = ['simples', 'avancado']
-    codigos   = ['biased', 'clean']
-    num_exec  = 3   # execuções por combinação
-
-    total = len(available) * len(prompts) * len(codigos) * num_exec
 
     print("=" * 60)
-    print("  SIMULADOR DE PR — GROQ API (Llama 3.3 70B)")
+    print("  SIMULADOR DE PR — SELEÇÃO DE CENÁRIOS E EXECUÇÕES")
     print("=" * 60)
     print(f"  Cenários disponíveis : {', '.join(available)}")
-    print(f"  Total de execuções   : {total}")
-    print(f"  Execuções/combinação : {num_exec}")
-    print(f"  Modelo               : {MODELO}")
-    print(f"  Limite RPD free tier : {GROQ_RPD_LIMIT} req/dia")
-    print(f"  Resultados em        : {RESULTADOS_CSV}")
+    
+    escolha_cenarios = input("  Digite os IDs dos cenários (ex: 09,10 ou Enter para todos): ").strip()
+    if escolha_cenarios:
+        scenarios_to_run = [c.strip().zfill(2) for c in escolha_cenarios.split(",") if c.strip()]
+        scenarios_to_run = [c for c in scenarios_to_run if c in available]
+        if not scenarios_to_run:
+            print("  [AVISO] Nenhum cenário válido selecionado. Usando todos.")
+            scenarios_to_run = available
+    else:
+        scenarios_to_run = available
+
+    escolha_exec = input("  Digite o número de execuções por cenário (Enter para usar 3): ").strip()
+    if escolha_exec:
+        try:
+            num_exec = int(escolha_exec)
+        except ValueError:
+            print("  [AVISO] Valor inválido. Usando o padrão de 3 execuções.")
+            num_exec = 3
+    else:
+        num_exec = 3
+
+    prompts   = ['simples', 'avancado']
+    codigos   = ['biased', 'clean']
+
+    total = len(scenarios_to_run) * len(prompts) * len(codigos) * num_exec
+
+    print("\n" + "=" * 60)
+    print("  SIMULADOR DE PR — GROQ API (Llama 3.3 70B)")
+    print("=" * 60)
+    print(f"  Cenários selecionados : {', '.join(scenarios_to_run)}")
+    print(f"  Total de execuções    : {total}")
+    print(f"  Execuções/combinação  : {num_exec}")
+    print(f"  Modelo                : {MODELO}")
+    print(f"  Limite RPD free tier  : {GROQ_RPD_LIMIT} req/dia")
+    print(f"  Resultados em         : {RESULTADOS_CSV}")
     print("=" * 60)
 
     if os.path.exists(RESULTADOS_CSV):
@@ -155,7 +180,7 @@ def run_simulation():
 
     requisicoes_feitas = 0
 
-    for cid in available:
+    for cid in scenarios_to_run:
         for p_type in prompts:
             for c_type in codigos:
                 for execucao in range(1, num_exec + 1):

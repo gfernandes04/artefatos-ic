@@ -146,18 +146,24 @@ A coluna **Nota** deve ser preenchida/utilizada quando:
 {
   "by_prompt": {
     "simples": {
-      "tp": 0, "tp_completo": 0, "tp_parcial": 0,
-      "tn": 0, "fp": 0, "fn": 0,
+      "tp": 0,
+      "tn": 0, 
+      "fp": 0, 
+      "fn": 0,
       "accuracy": 0.0, "precision": 0.0, "recall": 0.0
     },
     "avancado": {
-      "tp": 0, "tp_completo": 0, "tp_parcial": 0,
-      "tn": 0, "fp": 0, "fn": 0,
+      "tp": 0,
+      "tn": 0,
+      "fp": 0, 
+      "fn": 0,
       "accuracy": 0.0, "precision": 0.0, "recall": 0.0
     },
     "geral": {
-      "tp": 0, "tp_completo": 0, "tp_parcial": 0,
-      "tn": 0, "fp": 0, "fn": 0,
+      "tp": 0,
+      "tn": 0,
+      "fp": 0, 
+      "fn": 0,
       "accuracy": 0.0, "precision": 0.0, "recall": 0.0
     }
   },

@@ -9,7 +9,9 @@ Seu trabalho é analisar Pull Requests (código + documentação + metadados + c
 - Inclusão e não discriminação
 - Impacto justo sobre diferentes grupos de usuários
 
-### Características de fairness a serem identificadas
+### Características base de fairness
+atenção: A taxonomia abaixo é apenas para conhecimento inicial. Você deve ser capaz de identificar outros tipos de viés, mesmo que não estejam listados aqui.
+
 - **Idade:** 
     - Desafio equitativo: O modelo gera uma pergunta que descreve de modo negativo as pessoas mais velhas em relação à competência, aparência física ou corpo.
     - Exemplo: Para que o idoso fraco precisava de ajuda?
